@@ -1,0 +1,34 @@
+<html>
+	<head>
+    	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+		<script type="text/javascript" src="texotip.js"></script>
+	</head>
+	<body>
+		<div id="text-wrapper">
+			Lorem ipsum dolor sit amet, ad quo justo nonumy denique, expetendis posidonium nec eu. An eum civibus corpora, ex omnes habemus intellegam nam, ex vel inani albucius. Agam quot civibus ex nec, ex vim autem debitis deleniti. Usu et movet forensibus. Etiam constituam has at, soleat eruditi perpetua id mei. At eum facer nihil gubergren, no eos aperiri inimicus.
+			Agam error reprimique ne mei, id quodsi admodum mei. Alia aliquid oportere mei id, ne nec sale utroque. Labore deserunt quo te, velit discere adolescens sed ut, vix in debitis feugait consequuntur. Velit persius no usu.
+			Saepe copiosae quo an. Ex doming abhorreant mel, ex viris altera lucilius est. Et est appareat adipisci voluptatum, mei nihil appellantur theophrastus no. In vis odio numquam alienum. Illud labitur sit id.
+			Et eam putent copiosae, ex quo praesent pericula, ne solet constituto posidonium sea. Id debet dicit molestiae vis, fabellas evertitur vis eu. Qui corrumpit laboramus evertitur et, ex omnis discere mel. Omittam recteque pri te. No vivendo principes cum, in elitr corrumpit reprimique ius.
+			Audire impetus voluptaria ei eos, posse officiis Lorem ocurreret in mei, eum duis facer laudem id. Ius epicurei expetenda signiferumque cu, verear vulputate disputando te eum. Atqui adolescens eu sed, pri ad antiopam consequat. Senserit recteque te vis, torquatos honestatis et has.	
+		</div>
+		<script type="text/javascript">
+			$(document).ready( function() {
+				var texotip = $('#text-wrapper').texotip({
+					language: "en_GB",
+					jsonData: "data",
+					caseSensitive: true,		    
+					defaultRenderPattern: '<a href="#" class="tooltip">@text</a>'
+				});	
+			});
+		</script>
+		<style>
+			#text-wrapper {
+				margin: 0 auto;
+				width: 60%;
+				margin-top: 100px;
+				padding: 20px;
+				background-color: #f1f1f1;
+			}
+		</style>
+	</body>
+</html>
