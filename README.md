@@ -22,7 +22,7 @@ git clone https://github.com/david-fiaty/jQuery-Texotip.git
 
 ### Including the script
 
-Include jQuery and the plugin on a page. jQuery should be included before Texotip.
+Include jQuery and the plugin on a page. jQuery should be included before Texotip:
 
 ```html
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -31,7 +31,7 @@ Include jQuery and the plugin on a page. jQuery should be included before Texoti
 
 ### Prepare some text
 
-Put the text you want to add your tooltips to in an HTML wrapper.
+Put the text you want to add your tooltips to in an HTML wrapper:
 
 ```html
 <div id="aText">
@@ -41,7 +41,7 @@ The modular approach to this library allows the creation of powerful dynamic web
 </div>
 ```
 
-### Call jQuery Texotip on the HTML wrapper
+### Call jQuery Texotip on the HTML wrapper:
 
 ```html
 <script type="text/javascript">
@@ -62,9 +62,7 @@ $(document).ready( function() {
 });
 </script>
 ```
-**jsonData** can be a system path or a web URL
-**language** the language that should be loaded
-
+The **jsonData** can be a system path or a web URL and the **language** parameter defines the language that should be loaded.
 Please see below for a full description of all the options available.
 
 ### The JSON data
