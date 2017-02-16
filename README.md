@@ -22,7 +22,7 @@ git clone https://github.com/david-fiaty/jQuery-Texotip.git
 
 ### Including the script
 
-Include jQuery and the plugin on a page.
+Include jQuery and the plugin on a page. jQuery should be included before Texotip.
 
 ```html
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -31,7 +31,7 @@ Include jQuery and the plugin on a page.
 
 ### Prepare some text
 
-Put the text you want to add your tooltips to in a wrapper.
+Put the text you want to add your tooltips to in an HTML wrapper.
 
 ```html
 <div id="aText">
