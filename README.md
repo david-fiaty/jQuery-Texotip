@@ -95,7 +95,7 @@ Prepare the JSON data for the target languages in a separate file. Here is an ex
 	}
 ]
 ```
-Please note that the HTML **should be escaped** in the JSON file 
+Please note that the HTML **should be escaped** in the JSON file. 
 From there, we can imagine displaying different tooltip contents for different users depending on various parameters like preferences, keywords or location.
 The JSON file could be generated dynamically by an API or a CMS.
 
