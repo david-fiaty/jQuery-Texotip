@@ -1,5 +1,7 @@
-jQuery Texotip Plugin | Multilingual tooltips based on JSON data files.
+jQuery Texotip Plugin 
 ================================
+
+## Multilingual tooltips based on JSON data files
 
 The jQuery Texotip Plugin provides a tooltip system based on JSON data. 
 Define words in a JSON file and specify what content should appear when a user interacts with those words.
