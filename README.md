@@ -1,20 +1,26 @@
-[jQuery Texotip Plugin] - Multilingual tooltips based on JSON data files.
+jQuery Texotip Plugin | Multilingual tooltips based on JSON data files.
 ================================
 
 The jQuery Texotip Plugin provides a tooltip system based on JSON data. 
 Define words in a JSON file and specify what content should appear when a user interacts with those words.
-jQuery supports plain text tooltips, but also HTML, video and audio content in the tooltips.
 
-The plugin Texotip comes with default templates but you can easily customize the CSS.
-jQuery Texotip supports multilanguage JSON data files, allowing you to display different content for different words, depending on the user language.
+jQuery Texotip supports plain text tooltips but also HTML, video and audio content in the tooltips.
+
+The plugin comes with default templates but you can easily customize the CSS.
+jQuery Texotip supports multi-language JSON data files, allowing you to display different content for different words, depending on the user language.
 
 ## Getting Started
 
 ### Downloading the files
 
-jQuery Texotip can be downloaded on the top right corner of this page. Click on the button to clone or download the project on your desktop
+jQuery Texotip can be downloaded on the top right corner of this page. Click on the button to clone or download the project on your desktop.
+You can also use the following command if you have GIT installed:
 
-### Including it on your page
+```html
+git clone https://github.com/david-fiaty/jQuery-Texotip.git
+```
+
+### Including the script
 
 Include jQuery and the plugin on a page.
 
@@ -35,7 +41,7 @@ The modular approach to this library allows the creation of powerful dynamic web
 </div>
 ```
 
-### Call jQuery Texotip on the wrapper
+### Call jQuery Texotip on the HTML wrapper
 
 ```html
 <script type="text/javascript">
@@ -50,16 +56,16 @@ There are a few parameters that you might want to add:
 <script type="text/javascript">
 $(document).ready( function() {
 	var texotip = $('#aText').texotip({
-		language: "en_GB",
 		jsonData: "data",
-		caseSensitive: true,		    
-		defaultRenderPattern: '<a href="#" class="tooltip">@text</a>'
+		language: "en_GB"
 	});	
 });
 </script>
 ```
-**jsonData** can be a system path like path/to/file/en_GB.textotip.json or a web URL like http://mywebapi.com/en_GB.textotip.json
-The plugin will try to guess depending on the format of what you put in that option.
+**jsonData** can be a system path or a web URL
+**language** the language that should be loaded
+
+Please see below for a full description of all the options available.
 
 ### The JSON data
 
@@ -89,8 +95,9 @@ Prepare the JSON data for the target languages in a separate file. Here is an ex
 	}
 ]
 ```
-Note that the HTML defined for the popups is escaped. The JSON file doesn't have to be static and could be generated dynamically by an API or a CMS.
+Please note that the HTML **should be escaped** in the JSON file 
 From there, we can imagine displaying different tooltip contents for different users depending on various parameters like preferences, keywords or location.
+The JSON file could be generated dynamically by an API or a CMS.
 
 ### TODO
 - Create more color themes
