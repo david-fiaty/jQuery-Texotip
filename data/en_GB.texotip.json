@@ -1,22 +1,24 @@
 [
 	{
-		"text": "Lorem",
-		"content": "<h1>my text with h1 tag</h1>",
+		"text": "jQuery",
+		"content": "A simple image defined in the JSON data file<br><img src=\"http://www.logoeps.com/wp-content/uploads/2011/08/jquery-logo.jpg\">",
 		"url": "http://www.google.co.uk"
 	},
 	{
-		"text": "denique",
-		"content": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/3Qxg8Dmvzxw\" frameborder=\"0\" allowfullscreen><\/iframe>",
-		"url": "http://www.google.fr"
+		"text": "JavaScript library",
+		"content": "A Youtube video about jQuery. Clicking on the link redirects to the Youtube page.<br><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BWXggB-T1jQ\" frameborder=\"0\" allowfullscreen><\/iframe>",
+		"url": "https://www.youtube.com/watch?v=BWXggB-T1jQ"
 	},
 	{
-		"text": "lius",
-		"content": "<img src=\"http://www.logoeps.com/wp-content/uploads/2011/08/jquery-logo.jpg\">",
-		"url": "http://www.cmsbox.fr"
+		"text": "DOM",
+		"content": "<strong>What is the DOM?<\/strong><br>The Document Object Model (DOM) is a cross-platform and language-independent application programming interface that treats an HTML, XHTML, or XML document as a free structure wherein each node is an object representing a part of the document.",
+		"url": "https://en.wikipedia.org/wiki/Document_Object_Model"
 	},
 	{
-		"text": "Ex",
-		"content": "<audio controls><source src=\"horse.ogg\" type=\"audio/ogg\"></audio>",
+		"text": "widgets",
+		"content": "This is an example of HTML audio widget display<br><audio controls><source src=\"horse.ogg\" type=\"audio/ogg\"></audio>",
 		"url": "http://www.google.cn"
 	}
 ]
+
+
