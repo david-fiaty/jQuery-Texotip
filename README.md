@@ -108,5 +108,5 @@ The JSON file could be generated dynamically by an API or a CMS.
 
 	
 ## License
-Copyright &copy; David Fiaty<br>
-Licensed under the MIT license.
+Copyright &copy; David Fiaty | https://www.davidfiaty.com<br>
+Licensed under the MIT license - http://opensource.org/licenses/MIT
