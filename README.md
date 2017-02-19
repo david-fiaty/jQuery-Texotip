@@ -1,7 +1,7 @@
 jQuery Texotip Plugin 
 ================================
 
-Tooltips with JSON
+Awesome JQuery Tooltips with JSON
 
 ## Multilingual tooltips based on JSON data files
 
