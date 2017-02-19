@@ -101,6 +101,14 @@ Please note that the HTML **should be escaped** in the JSON file.
 From there, we can imagine displaying different tooltip contents for different users depending on various parameters like preferences, keywords or location.
 The JSON file could be generated dynamically by an API or a CMS.
 
+### Configuration options
+
+Option | Type | Default | Description
+------ | ---- | ------- | -----------
+language | string | en_GB | The JSON language file to load. Use ISO 639-1 Codes/Regions. See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+jsonData | string | data | System path or URL to a JSON data file
+caseSensitive | boolean | true | Should the word detection be case sensitive
+
 ### TODO
 - Create more color themes
 - Enrich the documentation (custom themes and animation callbacks)
