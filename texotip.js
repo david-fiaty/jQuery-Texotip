@@ -50,7 +50,7 @@
 		// Init the plugin
 		return init(this);
 	}
-		
+	
 	function init(wrapper) {
 	
 		// Load theme css
@@ -61,7 +61,12 @@
 
 		// Hide all opened boxes
 		$(window).resize(function() {
-			$('.' + $.fn.texotip.settings.boxClass + ', .texotip-arrow').hide();
+			var targets = $('.' + $.fn.texotip.settings.boxClass + ', .texotip-arrow');
+			targets.each (function() {
+				if ($(this).is(":visible")) {
+					$(this).hide();
+				}
+			});
 		});
 
 		// Return the wrapper
@@ -75,7 +80,7 @@
 		
 		return false;
     };
-	
+
 	$.fn.getItemHtml = function (item, rowid) {
 		
 		// Get the html model
@@ -94,7 +99,7 @@
 		// Return
 		return outputHTML[0].outerHTML;
 	};
-	
+
 	$.fn.getData = function (wrapper) {
 
 		var $this = $(this);
@@ -124,7 +129,7 @@
 			}
 		});	
 	};
-	
+
 	$.fn.prepareItemOutput = function (wrapper , data) {
 		var $this = $(this);
 
@@ -134,7 +139,7 @@
 			wrapper.html(wrapper.html().replace(regexp, itemHTML));
 		});   
 	}
-	
+
 	$.fn.runActionFunction = function (wrapper) {
 	
 		// Set the target tooltip trigger class
@@ -149,7 +154,7 @@
 			$(this).addHoverEffect();
 		}); 
 	}
-	
+
 	$.fn.addHoverEffect = function () {
 	 
 	 	// Size and position parameters
@@ -216,7 +221,7 @@
 				}
 			}
 		});
-		
+
 		// Mouseleave
 		if (!$.fn.texotip.settings.closeButton) {
 			$this.on('mouseleave', function () {
@@ -225,7 +230,7 @@
 				}
 			});
 		}
-		
+
 		// Click, tap
 		if ($.fn.texotip.settings.linkActive) {
 			$this.on('click tap', function (e) {
@@ -233,5 +238,4 @@
 			});		
 		}
 	}
-	
 }(jQuery));
