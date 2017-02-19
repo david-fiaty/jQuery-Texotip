@@ -4,14 +4,14 @@
 		<script type="text/javascript" src="texotip.js"></script>
 	</head>
 	<body>
-		<div id="someText">
+		<div id="aText">
 		jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. It is free, open-source software using the permissive MIT License. 
 		jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. It also provides capabilities for developers to create plug-ins on top. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets. 
 		The modular approach to this library allows the creation of powerful dynamic web pages and Web applications.
 		</div>
 		<script type="text/javascript">
 			$(document).ready( function() {
-				var texotip = $('#someText').texotip({
+				var texotip = $('#aText').texotip({
 					language: "en_GB",
 					jsonData: "data",
 					caseSensitive: true,		    
@@ -20,7 +20,7 @@
 			});
 		</script>
 		<style>
-			#someText {
+			#aText {
 				margin: 0 auto;
 				width: 60%;
 				margin-top: 100px;
