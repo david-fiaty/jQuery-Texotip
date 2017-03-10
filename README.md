@@ -1,7 +1,7 @@
 jQuery Texotip Plugin 
 ================================
 
-Awesome JQuery Tooltips with JSON | Demo: https://www.davidfiaty.com/web/jQuery-Texotip/demo.html
+Awesome JQuery Tooltips with JSON | <a href="https://www.davidfiaty.com/web/jQuery-Texotip/demo.html" target="_blank">JQuery Texotip demo</a>
 
 ## Multilingual tooltips based on JSON data files
 
