@@ -1,0 +1,24 @@
+[
+	{
+		"text": "jQuery",
+		"content": "A simple image defined in the JSON data file<br><br><img src=\"http://www.logoeps.com/wp-content/uploads/2011/08/jquery-logo.jpg\">",
+		"url": "http://www.google.co.uk"
+	},
+	{
+		"text": "JavaScript library",
+		"content": "A Youtube video about jQuery. Clicking on the link redirects to the Youtube page.<br><br><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BWXggB-T1jQ\" frameborder=\"0\" allowfullscreen><\/iframe>",
+		"url": "https://www.youtube.com/watch?v=BWXggB-T1jQ"
+	},
+	{
+		"text": "DOM",
+		"content": "<strong>What is the DOM?<\/strong><br>The Document Object Model (DOM) is a cross-platform and language-independent<br>application programming interface that treats an HTML, XHTML, or XML document<br>as a free structure wherein each node is an object representing a part of the document.",
+		"url": "https://en.wikipedia.org/wiki/Document_Object_Model"
+	},
+	{
+		"text": "widgets",
+		"content": "This is an example of HTML audio widget display<br><br><audio controls><source src=\"horse.ogg\" type=\"audio/ogg\"></audio>",
+		"url": "http://www.google.cn"
+	}
+]
+
+

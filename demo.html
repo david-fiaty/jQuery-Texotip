@@ -1,31 +1,38 @@
 <html>
 	<head>
-    	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <title>jQuery Texotip | Multilingual tooltips based on JSON data files </title>
+        <meta name="description" content="The jQuery Texotip Plugin provides a tooltip system based on JSON data. Define words in a JSON file and specify what content should appear when a user interacts with those words. Authored by David Fiaty" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="demo.css">
+
+   		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 		<script type="text/javascript" src="texotip.js"></script>
-	</head>
-	<body>
-		<div id="aText">
+    </head>
+   	<body>
+		<div id="myText">
 		jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. It is free, open-source software using the permissive MIT License. 
 		jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. It also provides capabilities for developers to create plug-ins on top. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets. 
 		The modular approach to this library allows the creation of powerful dynamic web pages and Web applications.
 		</div>
 		<script type="text/javascript">
 			$(document).ready( function() {
-				var texotip = $('#aText').texotip({
+				var texotip = $('#myText').texotip({
 					language: "en_GB",
 					jsonData: "data",
-					caseSensitive: true,		    
+					caseSensitive: true,	
+					theme: "white",	    
 					defaultRenderPattern: '<a href="#" class="tooltip">@text</a>'
 				});	
 			});
 		</script>
 		<style>
-			#aText {
+			#myText {
 				margin: 0 auto;
 				width: 60%;
 				margin-top: 100px;
 				padding: 20px;
 				background-color: #f1f1f1;
+				line-height: 25px;
 			}
 		</style>
 	</body>

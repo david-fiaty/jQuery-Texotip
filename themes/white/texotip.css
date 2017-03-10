@@ -1,0 +1,60 @@
+/**
+ * Texotip jQuery plugin
+ *
+ * @copyright Copyright 2017, David Fiaty
+ * @license   MIT license
+ * @link      https://www.davidfiaty.com
+ * @version   v1.0
+ */
+ 
+.tooltip {
+	text-decoration: underline;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+
+.texotip-box {
+	background-color: white;
+	border-radius: 10px;
+	position: absolute;
+	display: none;
+	white-space: nowrap;
+	color: gray;
+	border: solid 1px #cccccc;
+}
+
+.texotip-box iframe, .texotip-box img {
+	width: 100%;
+	height: auto;
+	display: block;
+}	
+
+.texotip-arrow {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 7px solid gray;
+	position: absolute;
+}
+
+.texotip-close {
+	top: -5px;
+	right: -5px;
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: gray;
+	border-radius: 100%;
+	background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
+	background-color: gray;
+	transition: all 0.3s ease;
+	font-size: 10px;
+}

@@ -35,7 +35,7 @@
 				close.hide().remove();
 				$(this).hide().remove();
 			},
-			theme: 'red-ocean',
+			theme: 'red',
 			linkActive: false,
 			linkTarget: '_blank',
 			closeButton: true					

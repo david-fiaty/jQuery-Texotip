@@ -1,0 +1,17 @@
+/**
+ * Texotip jQuery plugin
+ *
+ * @copyright Copyright 2017, David Fiaty
+ * @license   MIT license
+ * @link      https://www.davidfiaty.com
+ * @version   v1.0
+ */
+
+body {
+	font-family: Arial, Helvetica;
+	font-size: 20px;
+}
+
+.texotip-box {
+	font-size: 14px;
+}

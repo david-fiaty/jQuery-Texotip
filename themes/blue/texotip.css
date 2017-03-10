@@ -16,16 +16,13 @@
 	position: relative;
 }
 
-.tooltip a {
-	color: red;
-} 
-
 .texotip-box {
-	background-color: red;
+	background-color: blue;
 	border-radius: 10px;
 	position: absolute;
 	display: none;
 	white-space: nowrap;
+	color: #ffffff;
 }
 
 .texotip-box iframe, .texotip-box img {
@@ -39,7 +36,7 @@
 	height: 0; 
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
-	border-bottom: 7px solid red;
+	border-bottom: 7px solid blue;
 	position: absolute;
 }
 
@@ -47,16 +44,16 @@
 	top: -5px;
 	right: -5px;
 	position: absolute;
-	display:block;
-	box-sizing:border-box;
-	width:20px;
-	height:20px;
-	border-width:5px;
+	display: block;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	border-width: 5px;
 	border-style: solid;
-	border-color:red;
-	border-radius:100%;
+	border-color: blue;
+	border-radius: 100%;
 	background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
-	background-color:red;
+	background-color: blue;
 	transition: all 0.3s ease;
 	font-size: 10px;
 }
