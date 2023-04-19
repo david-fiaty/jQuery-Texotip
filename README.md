@@ -27,7 +27,7 @@ git clone https://github.com/david-fiaty/jQuery-Texotip.git
 Include jQuery and the plugin on a page. jQuery should be included before Texotip:
 
 ```html
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="texotip.js"></script>
 ```
 
