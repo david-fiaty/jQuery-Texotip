@@ -106,7 +106,7 @@ The JSON file could be generated dynamically by an API or a CMS.
 
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
-jsonData | string | data | System path or URL to a JSON data file.
+jsonData | string | data | System path or URL to a JSON data file. If a system path, the value provided is interpreted as a directory starting from "./". Expected inside that directory is a filename with a language prefix and "texotip.json" suffix, such as "en_BG.texotip.json".
 caseSensitive | boolean | true | Should the word detection be case sensitive.
 language | string | en_GB | The JSON language file to load. Use ISO 639-1 Codes/Regions. See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes.
 theme | string | red-ocean | The theme to use for the tooltip box
