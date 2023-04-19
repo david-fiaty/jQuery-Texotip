@@ -112,7 +112,7 @@
 				
 		// Ajax query
 		$.ajax({
-			type: "POST",
+			type: "GET",
 			url: jsonURI,
 			contentType: "application/x-www-form-urlencoded;charset=UTF-8",
 			dataType: "json",
