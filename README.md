@@ -112,6 +112,7 @@ language | string | en_GB | The JSON language file to load. Use ISO 639-1 Codes/
 linkActive | boolean | true | Should a click on a tooltip link redirect open an URL
 linkTarget | string | _blank | Should a click on a tooltip open a link in a new window or in the same window.
 closeButton | boolean | true |	Should the tooltip box present a close button. When the close button exists, and the user mouses over and then away from the item, the tooltip will remain open. And vice-versa: no button means the tooltip hides on mouse-out.
+customCss | string | path to custom CSS file; if provided, this css path will override any theme setting.
 
 ### TODO
 - Enrich the documentation (animation callbacks)

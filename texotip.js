@@ -37,7 +37,8 @@
 			},
 			linkActive: false,
 			linkTarget: '_blank',
-			closeButton: true					
+			closeButton: true,
+			customCss: "",
 		};
 
 		// Assign the default settings
