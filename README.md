@@ -109,14 +109,12 @@ Option | Type | Default | Description
 jsonData | string | data | System path or URL to a JSON data file. If a system path, the value provided is interpreted as a directory starting from "./". Expected inside that directory is a filename with a language prefix and "texotip.json" suffix, such as "en_BG.texotip.json".
 caseSensitive | boolean | true | Should the word detection be case sensitive.
 language | string | en_GB | The JSON language file to load. Use ISO 639-1 Codes/Regions. See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes.
-theme | string | red-ocean | The theme to use for the tooltip box
 linkActive | boolean | true | Should a click on a tooltip link redirect open an URL
 linkTarget | string | _blank | Should a click on a tooltip open a link in a new window or in the same window
 closeButton | boolean | true |	Should the tooltip box present a close button				
 
 ### TODO
-- Create more color themes
-- Enrich the documentation (custom themes and animation callbacks)
+- Enrich the documentation (animation callbacks)
 - Add options to control the number of times a word can be highlighted
 
 	

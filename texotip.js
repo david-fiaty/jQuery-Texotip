@@ -35,7 +35,6 @@
 				close.hide().remove();
 				$(this).hide().remove();
 			},
-			theme: 'red',
 			linkActive: false,
 			linkTarget: '_blank',
 			closeButton: true					
@@ -53,9 +52,6 @@
 	
 	function init(wrapper) {
 	
-		// Load theme css
-		$('head').append('<link rel="stylesheet" href="themes/' + $.fn.texotip.settings.theme + '/texotip.css" type="text/css" />');
-
 		// Load the data
 		$(this).getData(wrapper);
 
