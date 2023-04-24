@@ -134,7 +134,8 @@
 		// avoid changing the text within pre-existing anchor tags.
 		// replace existing link text with unique tokens, for replacement afterwards
 		var numLinks = 0;
-		wrapper.find("a").each(function() {
+		wrapper.find("a, img").each(function() {
+			console.log(this);
 			var value = this.outerHTML;
 			var regexp = new RegExp(value, "g"); // todo escape chars in token
 			var uniqueToken = "_=_" + numLinks + "_=_";
