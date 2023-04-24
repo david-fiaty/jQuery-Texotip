@@ -128,25 +128,40 @@
 
 	$.fn.prepareItemOutput = function (wrapper , data) {
 		var $this = $(this);
+		var unique = {};
+		var edit = wrapper.html();
+
+		// avoid changing the text within pre-existing anchor tags.
+		// replace existing link text with unique tokens, for replacement afterwards
+		var numLinks = 0;
+		wrapper.find("a").each(function() {
+			var value = this.outerHTML;
+			var regexp = new RegExp(value, "g"); // todo escape chars in token
+			var uniqueToken = "_=_" + numLinks + "_=_";
+			unique[uniqueToken] = value;
+			edit = edit.replace(regexp, uniqueToken);
+			numLinks++;
+		});
 
 		// since a replacement value may contain a *another, different* search token,
 		// we must take care to prevent matching something in any previously-substituted anchor.
 		// first, replace all hits with a unique, manufactured token,
 		// then iterate again over those replacements with final values,
 		// since replacement values are then guaranteed not to contain any of the unique strings
-		var unique = {};
 		$.each(data, function(i) {
 			var key = data[i].text;
+			var value = $this.getItemHtml(data[i], i);
 			// todo warn if keys are repeated or one key is part of other key that has spaces
 			var regexp = new RegExp(key, "g"); // todo escape chars in token
-			var uniqueToken = "_=_" + i + "_=_";
-			unique[uniqueToken] = $this.getItemHtml(data[i], i);
-			wrapper.html(wrapper.html().replace(regexp, uniqueToken));
+			var uniqueToken = "_=_" + (i + numLinks) + "_=_";
+			unique[uniqueToken] = value;
+			edit = edit.replace(regexp, uniqueToken);
 		});
 		for (let uniqueToken in unique) {
 			var regexp = new RegExp(uniqueToken, "g");
-			wrapper.html(wrapper.html().replace(regexp, unique[uniqueToken]));
+			edit = edit.replace(regexp, unique[uniqueToken]);
 		}
+		wrapper.html(edit);
 	}
 
 	$.fn.runActionFunction = function (wrapper) {
