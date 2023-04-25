@@ -38,7 +38,6 @@
 			linkActive: false,
 			linkTarget: '_blank',
 			closeButton: true,
-			customCss: "",
 		};
 
 		// Assign the default settings
@@ -127,6 +126,10 @@
 		});	
 	};
 
+	$.fn.escapeRegExp = function(string) {
+		return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+	}
+
 	$.fn.prepareItemOutput = function (wrapper , data) {
 		var $this = $(this);
 		var unique = {};
@@ -136,9 +139,8 @@
 		// replace existing link text with unique tokens, for replacement afterwards
 		var numLinks = 0;
 		wrapper.find("a, img").each(function() {
-			console.log(this);
 			var value = this.outerHTML;
-			var regexp = new RegExp(value, "g"); // todo escape chars in token
+			var regexp = new RegExp($this.escapeRegExp(this.outerHTML), "g");
 			var uniqueToken = "_=_" + numLinks + "_=_";
 			unique[uniqueToken] = value;
 			edit = edit.replace(regexp, uniqueToken);
@@ -154,7 +156,7 @@
 			var key = data[i].text;
 			var value = $this.getItemHtml(data[i], i);
 			// todo warn if keys are repeated or one key is part of other key that has spaces
-			var regexp = new RegExp(key, "g"); // todo escape chars in token
+			var regexp = new RegExp($this.escapeRegExp(key), "g");
 			var uniqueToken = "_=_" + (i + numLinks) + "_=_";
 			unique[uniqueToken] = value;
 			edit = edit.replace(regexp, uniqueToken);
