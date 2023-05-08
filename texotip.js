@@ -35,10 +35,9 @@
 				close.hide().remove();
 				$(this).hide().remove();
 			},
-			theme: 'red',
 			linkActive: false,
 			linkTarget: '_blank',
-			closeButton: true					
+			closeButton: true,
 		};
 
 		// Assign the default settings
@@ -53,9 +52,6 @@
 	
 	function init(wrapper) {
 	
-		// Load theme css
-		$('head').append('<link rel="stylesheet" href="themes/' + $.fn.texotip.settings.theme + '/texotip.css" type="text/css" />');
-
 		// Load the data
 		$(this).getData(wrapper);
 
@@ -112,7 +108,7 @@
 				
 		// Ajax query
 		$.ajax({
-			type: "POST",
+			type: "GET",
 			url: jsonURI,
 			contentType: "application/x-www-form-urlencoded;charset=UTF-8",
 			dataType: "json",
@@ -130,14 +126,46 @@
 		});	
 	};
 
+	$.fn.escapeRegExp = function(string) {
+		return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+	}
+
 	$.fn.prepareItemOutput = function (wrapper , data) {
 		var $this = $(this);
+		var unique = {};
+		var edit = wrapper.html();
 
-		return $.each(data, function(i) {
-			var regexp = new RegExp(data[i].text, "g");
-			var itemHTML = $this.getItemHtml(data[i], i);
-			wrapper.html(wrapper.html().replace(regexp, itemHTML));
-		});   
+		// avoid changing the text within pre-existing anchor tags.
+		// replace existing link text with unique tokens, for replacement afterwards
+		var numLinks = 0;
+		wrapper.find("a, img").each(function() {
+			var value = this.outerHTML;
+			var regexp = new RegExp($this.escapeRegExp(this.outerHTML), "g");
+			var uniqueToken = "_=_" + numLinks + "_=_";
+			unique[uniqueToken] = value;
+			edit = edit.replace(regexp, uniqueToken);
+			numLinks++;
+		});
+
+		// since a replacement value may contain a *another, different* search token,
+		// we must take care to prevent matching something in any previously-substituted anchor.
+		// first, replace all hits with a unique, manufactured token,
+		// then iterate again over those replacements with final values,
+		// since replacement values are then guaranteed not to contain any of the unique strings
+		$.each(data, function(i) {
+			var key = data[i].text;
+			var value = $this.getItemHtml(data[i], i);
+			// todo warn if keys are repeated or one key is part of other key that has spaces
+			var regexp = new RegExp($this.escapeRegExp(key), "g");
+			var uniqueToken = "_=_" + (i + numLinks) + "_=_";
+			unique[uniqueToken] = value;
+			edit = edit.replace(regexp, uniqueToken);
+		});
+		for (let uniqueToken in unique) {
+			var regexp = new RegExp(uniqueToken, "g");
+			edit = edit.replace(regexp, unique[uniqueToken]);
+		}
+		wrapper.html(edit);
 	}
 
 	$.fn.runActionFunction = function (wrapper) {

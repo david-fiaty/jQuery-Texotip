@@ -4,15 +4,19 @@
         <meta name="description" content="The jQuery Texotip Plugin provides a tooltip system based on JSON data. Define words in a JSON file and specify what content should appear when a user interacts with those words. Authored by David Fiaty" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="demo.css">
+		<link rel="stylesheet" type="text/css" href="themes/white/texotip.css">
 
-   		<script type="text/javascript" src="//code.jquery.com/jquery-1.10.0.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 		<script type="text/javascript" src="texotip.js"></script>
     </head>
    	<body>
 		<div id="myText">
 		jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. It is free, open-source software using the permissive MIT License. 
 		jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. It also provides capabilities for developers to create plug-ins on top. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets. 
-		The modular approach to this library allows the creation of powerful dynamic web pages and Web applications.
+		The modular approach to this library allows the creation of powerful dynamic web pages and Web applications. <a href="#jQuery" title="jQuery">Pre-existing links with target text like 'jQuery' should be ignored by the texotip</a>
+		<br/>
+		<br/>
+		<img src="#" title="prexisting image titles with target text like 'jQuery' should be ignored">
 		</div>
 		<script type="text/javascript">
 			$(document).ready( function() {
@@ -20,7 +24,6 @@
 					language: "en_GB",
 					jsonData: "data",
 					caseSensitive: true,	
-					theme: "white",	    
 					defaultRenderPattern: '<a href="#" class="tooltip">@text</a>'
 				});	
 			});

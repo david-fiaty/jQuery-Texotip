@@ -1,13 +1,13 @@
 [
 	{
-		"text": "jQuery",
-		"content": "A simple image defined in the JSON data file<br><br><img src=\"https://www.logoeps.com/wp-content/uploads/2011/08/jquery-logo.jpg\">",
-		"url": "http://www.google.co.uk"
-	},
-	{
 		"text": "JavaScript library",
 		"content": "A Youtube video about jQuery. Clicking on the link redirects to the Youtube page.<br><br><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BWXggB-T1jQ\" frameborder=\"0\" allowfullscreen><\/iframe>",
 		"url": "https://www.youtube.com/watch?v=BWXggB-T1jQ"
+	},
+	{
+		"text": "jQuery",
+		"content": "A simple image defined in the JSON data file<br><br><img src=\"https://www.logoeps.com/wp-content/uploads/2011/08/jquery-logo.jpg\">",
+		"url": "http://www.google.co.uk"
 	},
 	{
 		"text": "DOM",
